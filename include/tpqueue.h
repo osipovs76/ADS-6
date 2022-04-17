@@ -11,7 +11,6 @@ int first, last;
 TPQueue() : first(0), last(0) {}
 void push(T x) {
 int param = last++;
-while ((--param >= first) && (arr[param % size].prior <= x.prior)) {
 while ((--param >= first) && (arr[param % size].prior < x.prior)) {
 arr[(param + 1) % size] = arr[param % size];
 }
